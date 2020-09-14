@@ -1,0 +1,87 @@
+/*
+ Theme Name:   Twenty Twenty Ajax
+ Theme URI:    https://example.com/twenty-twenty-ajax/
+ Description:  Twenty Twenty Ajax Child Theme
+ Author:       Denis Žoljom
+ Author URI:   https://madebydenis.com
+ Template:     twentytwenty
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+ Text Domain:  twentytwentyajax
+*/
+
+.load-more-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.load-more-wrapper--loader,
+.load-more-wrapper--loader:before,
+.load-more-wrapper--loader:after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: load7 1.8s infinite ease-in-out;
+    animation: load7 1.8s infinite ease-in-out;
+}
+
+.load-more-wrapper--loader {
+    color: #cd2653;
+    font-size: 10px;
+    margin: 20px auto;
+    display: none;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+.load-more-wrapper--loader.is-loading {
+    display: block;
+}
+
+.load-more-wrapper--loader:before,
+.load-more-wrapper--loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -3.5em;
+}
+
+.load-more-wrapper--loader:before {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.load-more-wrapper--loader:after {
+    left: 3.5em;
+}
+
+@-webkit-keyframes load7 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 2.5em 0 -1.3em;
+    }
+    40% {
+        box-shadow: 0 2.5em 0 0;
+    }
+}
+
+@keyframes load7 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 2.5em 0 -1.3em;
+    }
+    40% {
+        box-shadow: 0 2.5em 0 0;
+    }
+}
