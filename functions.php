@@ -39,6 +39,7 @@ function twentytwenty_ajax_enqueue_scripts() {
 	wp_localize_script( $script_handle, 'twentyTwentyAjaxLocalization', array(
 		'ajaxurl' => $ajaxurl,
 		'action' => 'twentytwenty_ajax_more_post',
+		'root' => esc_url_raw( rest_url() ),
 		'noPosts' => esc_html__('No older posts found', 'twentytwenty-ajax'),
 	) );
 }
